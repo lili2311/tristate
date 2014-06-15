@@ -1,0 +1,400 @@
+
+ 
+$base-font-name: "Open Sans", sans serif;
+$padding-margin-value: 2em;
+$header-height: 10em;
+$base-font-size: 1.1em;
+$base-font-light:300;
+$line-height: 1.8em;
+$black:#3c3c3c;
+$dark-purple:#6F5499;
+$dark-grey:#565656;
+$pale-green:#77C7AC;
+$blue:#394e63;
+$white: #fcfcfc;
+$grey: #505050;
+$base-dark-font-color: $grey;
+$base-light-font-color: $white;
+$accent-color: $pale-green;
+$light-background: $white;
+$dark-background:$blue;
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body, html {
+  margin:0;
+  padding:0;
+  color: $grey;
+  font-family: $base-font-name;
+  font-weight: $base-font-light;
+  font-size: $base-font-size;
+  line-height: $line-height;
+}
+#main {
+  min-height:500px;
+}
+div.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+#wrapper{
+
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: $header-height;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: $dark-background;
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  -ms-transition: height 0.3s;
+  -o-transition: height 0.3s;
+  transition: height 0.3s;
+  nav {
+    display: inline-block;
+    float: right;
+    ul {
+      list-style:none;
+      li {
+        display: inline-block;
+        a {
+          line-height: $header-height;
+          color: $light-background;
+          text-decoration:none;
+          font-weight: 300;
+          margin-left:1em;
+          -webkit-transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          -ms-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s;
+        }
+      }
+    }
+    a:hover {
+      color: #77C7AC;
+    }
+  }
+}
+section.splash {
+  background: url("http://nextmlt.com/wp-content/uploads/2014/05/alejandroescamilla-book.jpg") no-repeat center center; 
+  background-size: cover;
+  min-height:30em;
+}
+section.color {
+  background-color: #f4f4f4;
+}
+section {
+  padding-bottom:$padding-margin-value;
+}
+p {
+  text-align:center;
+}
+
+h1.logo {
+  display: inline-block;
+  margin: 0;
+  line-height:5em;
+  padding:0;
+  float: left;
+  font-family: "Open Sans", sans-serif;
+  color: #fcfcfc;
+  /**text-shadow: 0.1em 0.03em #C0392B;**/
+  font-weight: 400;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+h1#tagline {
+  color:$black;
+  font-style:italic;  
+}
+header.smaller {
+  height: 75px;
+  h1#logo {
+    line-height: 75px;
+    font-size: 30px;
+  }
+  nav {
+    a {
+
+    }  
+  }
+}        
+.col {
+  width:31.3333333%;
+  display:inline-block;
+  vertical-align: top;
+  text-align:center;
+}
+h1,h3 {
+  font-weight:$base-font-light;
+  padding-top:$padding-margin-value;
+  display:block;
+  color: $accent-color;
+  text-align:center;
+  margin:0;
+}
+.container {
+  width:70%;
+  margin:0 auto;
+  padding:0;
+}
+footer {
+  background-color: #3c3c3c;
+  text-align: center;
+  min-height:17em;
+  color: #bababa;
+  padding:$padding-margin-value;
+  .container {
+    position:relative;
+  }
+  a {
+    display: inline-block;
+    margin: 0;
+    text-decoration:underline;
+  }
+  ul {
+    list-style:none;
+    li {
+      a {
+        color: #bababa;   
+        display:block;
+        &:hover {
+          color: #77C7AC;
+        }
+      }
+    }
+  }
+}
+
+.icon {
+  height: 32px;
+  width: 32px;
+  position: relative;
+  margin: 15px;
+  overflow: hidden;
+  display: inline-block;
+}
+.home {
+  height: 0px;
+  width: 0px;
+  border-width: 16px;
+  border-style: solid;
+  border-color: transparent transparent #394e63 transparent;
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  &:after {
+    content: '';
+    width: 22px;
+    height: 16px;
+    background-color: transparent;
+    position: absolute;
+    top: 16px;
+    right: -11px;
+    border-left: 8px solid #394e63;
+    border-right: 8px solid #394e63;
+  }
+
+  &:before {
+    content: '';
+    width: 9px;
+    height: 6px;
+    background-color: #394e63;
+    position: absolute;
+    top: 16px;
+    right: -5px;
+  }
+}
+#content {
+  margin-top:$header-height;
+}
+.icon-container {
+  border:1px solid $dark-background;
+  border-radius:64px;
+  width:64px;
+  height:64px;
+  margin:auto;
+  margin-top:$padding-margin-value;
+
+}
+.copy {
+  color:$accent-color;
+}
+
+
+.chimney {
+  width: 4px;
+  height: 10px;
+  color:$dark-background;
+  position: absolute;
+  right: 6px;
+  top: 3px;
+}
+#letter {
+  height:32px;
+  vertical-align:top;
+  font-size:2.5em;
+  color:$dark-background;
+}
+#email {
+  color:#505050;
+  &:hover  {
+  color:#77C7AC;
+  }
+}
+.phone {
+  position: absolute;
+  width: 20px;
+  height: 32px;
+  background-color: #394e63;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  margin-left: 6px;
+  &:before {
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 20px;
+    background: #fcfcfc;
+    left: 2px;
+    top: 5px;
+  }
+  &:after {
+    position: absolute;
+    content: '';
+    background: #fcfcfc;
+    width: 3px;
+    height: 3px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    bottom: 2px;
+    left: 8px;
+  }
+}
+
+
+
+/**   
+
+a#email {
+color:#505050;
+}
+a#email:hover  {
+color:#77C7AC;
+}
+
+
+footer col a {
+}
+footer div
+}
+footer div#copy a {
+color: #77C7AC;  
+}
+footer div
+
+}
+
+
+
+
+
+
+
+@media all and (max-width: 760px) {
+header h1.logo {
+display: block;
+float: none;
+margin: 0 auto;
+height: 100px;     
+line-height: 80px;
+text-align: center;
+}
+
+header nav {
+display: block;
+float: none;
+height: 50px;
+text-align: center;
+margin: 0 auto;
+}
+
+header nav a {
+line-height: 50px;
+margin: 0 10px;
+}
+
+header.smaller {
+height: 75px;
+}
+
+header.smaller h1.logo {
+height: 40px;
+line-height: 40px;
+font-size: 30px;
+width:100%;
+}
+
+
+header.smaller nav {
+height: 35px;
+}
+
+header.smaller nav a {
+line-height: 35px;
+}
+footer div.col {
+width:100%;
+display:inline-block;
+vertical-align: top;
+margin:0;
+}
+footer ul li {
+display:inline-block;
+margin:0 0.5em;
+float:left;
+}
+
+}
+
+@media all and (max-width: 600px) {
+.container {
+width: 100%;
+}
+
+footer a {
+display: block;
+}
+div.icon-container {
+display:inline-block;
+}
+div
+{
+display:block;
+width:100%;
+padding:1em 0;
+margin:0;
+}
+}
+**/

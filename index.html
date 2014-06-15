@@ -18,60 +18,103 @@
 </head>
 
 <body>
-    <div id="wrapper">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
+<div id="wrapper">
   <header>
       <div class="container clearfix">
-          <h1 id="logo">Tri-State Binders</h1>
+          <h1 class="logo">Tri-State Binders</h1>
           <nav>
-              <a href="#bacon">About</a>
-              <a href="#sausage">Services</a>
-              <a href="#biltong">Contact</a>
+            <ul>
+              <li>
+                <a href="#bacon">About</a>
+              </li>
+              <li>
+                <a href="#sausage">Services</a>
+              </li>
+              <li>  
+                <a href="#biltong">Contact</a>
+              </li>
+            </ul>
           </nav>
       </div>
   </header>
 
   <div id="main">
-      <div id="content">
-          <section>
+      <div id="content"> 
+        <section class="splash">
+          <div class="container"><h1 id="tagline">"We preserve for posterity"</h1></div>
+        </section>
+          <section id="about">
               <div class="container">
-                  <h1>I Second That Emotion</h1>
-                  <p>Aww, it's true. I've been hiding it for so long. Perhaps, but perhaps your civilization is merely the sewer of an even greater society above you! You guys go on without me! I'm going to go… look for more stuff to steal! When I was first asked to make a film about my nephew, Hubert Farnsworth, I thought "Why should I?" Then later, Leela made the film. But if I did make it, you can bet there would have been more topless women on motorcycles. Roll film! So I really am important? How I feel when I'm drunk is correct? Is the Space Pope reptilian!?</p>
-                  <p>Bacon atball corned beef strip steak andouille.</p>
+                  <h1>About</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dapibus, nisl quis sagittis fermentum, velit ipsum placerat libero, ut dignissim ipsum nisi ut quam. Cras lacinia, velit et convallis mattis, ligula quam elementum tellus, ac mattis urna velit a turpis. Fusce mauris arcu, rutrum vitae urna id, condimentum posuere diam. Integer urna dolor, commodo id ante at, imperdiet hendrerit nunc. Vivamus sit amet magna eu erat volutpat. </p>
+                  <p>Nunc nulla enim, tincidunt eu pretium malesuada, consectetur sit amet erat. In vulputate sollicitudin tellus, non faucibus sapien bibendum non. Phasellus adipiscing fringilla nisi.</p>
               </div>
           </section>
           <section class="color">
               <div class="container">
-                  <h1>The Duh-Vinci Code</h1>
-                  <p>Bender, you risked your life to save me! Good news, everyone! I've taught the toaster to feel love! I can explain. It's very valuable. Can we  We'll need to have a look inside you with this camera. Really?!</p>
-                  <p>Bacon ipsum dolor sit amet pig biltong filet mignon, kiel</p>
+                  <h1>Services</h1>
+                  <div class ="col col-1">
+                    <h3>Rebinding</h3>
+                    <p>We offer a comprehensive book restoration and repair service.</p>
+                  </div>
+                  <div class ="col col-2">
+                  <h3>Laminating</h3> 
+                    <p>The original book covers are incorporated into a laminated hard case binding.</p>
+                  </div>
+                 <div class ="col col-3">
+                   <h3>Canvas Covering</h3> 
+                   <p>Documents and books can be rebound with a new canvas cover.</p>
+                </div>
               </div>
           </section>
           <section id="contact">
               <div class="container">
                 <h1>Contact Us </h1>
-                <h3>ADDRESS:</h3>
-          Tri-State Binders<br/>
-          <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-          <span itemprop="streetAddress">401 East 8th St.</span>
-          <span itemprop="addressLocality">Sioux Falls, SD </span><br/>       
-          <span itemprop="postalCode">57103</span><br/>           
-          <span itemprop="addressCountry">US</span></span><br/>
-          <h3>PHONE:</h3>     
-          <span itemprop="telephone">(318) 250-0491</span> <br/>
-          <h3>EMAIL:</h3>             
-          <span itemprop="email">TriStateBinders@gmail.com</span>
+                <div class ="col col-1">
+                  <div class="icon-container">
+                  <div class="icon">
+                    <div class="home"></div>
+                    <div class="chimney"></div>
+                  </div>
+                  </div>
+                  <h3>ADDRESS</h3>
+                <p>Tri-State Binders,
+                <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="streetAddress">401 East 8th St,</span>
+                <span itemprop="addressLocality">Sioux Falls, SD  </span>   
+                <span itemprop="postalCode">57103,</span> 
+                  <span itemprop="addressCountry">US</span></p>
+                </div>
+                <div class ="col col-2">
+                  <div class="icon-container">
+                    <div class="icon">
+                      <div class="phone"></div>
+                    </div>
+                  </div>
+                  <h3>PHONE</h3>      
+                  <p itemprop="telephone">(318) 250-0491</p> 
+                </div>
+                 <div class ="col col-3">
+                   <div class="icon-container">
+                   <div class="icon">
+                     <div id="letter"> &#x2709;</div>
+                   </div>
+                   </div>
+                  <h3>EMAIL</h3>              
+                <p itemprop="email"><a id="email" href="mailto:tri_state_binders@msn.com?Subject=Enquiry" target="_top">tri_state_binders@msn.com</a></p>
+                </div>
               </div>
       </section>
          <section id="map">
-              <div id="map-canvas"></div>
+           <div id="map-canvas"><h1> MAP GOES HERE</h1>
+           <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script></div>
           </section>
      </div>
   </div>
-  <script src="js/scroll.js" style="text/javascript"></script> <script src="js/map.js" style="text/javascript"></script>
-
    <footer>
         <div class="container clearfix">
-          <div class ="col" id="col-1">
+          <div class ="col col-1">
             <ul>
               <li>Tri-State Binders</li>
               <li><a href="#0">Home</a></li>        
@@ -80,15 +123,13 @@
               <li><a href="#0">Sitemap</a></li> 
             </ul>
           </div>
-          <div  class ="col" id="col-2">
+          <div  class ="col col-2">
             <ul>
               <li>Social</li>
               <li><a href="#0">Facebook</a></li>      
-              <li><a href="#0">Twitter</a></li> 
-              <li><a href="#0">LinkedIn</a></li> 
             </ul>
           </div>
-          <div  class ="col" id="col-3">
+          <div  class ="col col-3">
             <ul>
               <li>Services</li>
               <li><a href="#0">Rebinding</a></li>        
@@ -96,7 +137,7 @@
               <li><a href="#0">Canvas Covering</a></li> 
             </ul>
           </div>
-          <div id="copy">&#xa9; Designed and built by <a href="https://twitter.com/lilianakastilio">@liianakastilio</a> 2013 - 2014</div>
+          <div>&#xa9; Designed and built by <a class="copy" href="https://twitter.com/lilianakastilio"> @lilianakastilio </a> 2013 - 2014</div>
         </div>
   </footer>
 </div>
