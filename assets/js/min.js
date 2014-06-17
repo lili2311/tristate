@@ -10,6 +10,4 @@ function init() {
     }
   });
 }
-var map;
-
 window.onload = init();
