@@ -4,6 +4,8 @@
 $base-font-name: "Open Sans", sans serif;
 $padding-margin-value: 2em;
 $header-height: 10em;
+$smaller-header-height: 5em;
+$smaller-logo-height:2.3em;
 $base-font-size: 1.1em;
 $base-font-light:300;
 $line-height: 1.8em;
@@ -69,8 +71,9 @@ header {
     display: inline-block; 
     float: right;
     ul {
-
       list-style:none;
+      margin:0;
+      padding:0;
       li {
         display: inline-block;
         a {
@@ -93,7 +96,7 @@ header {
   }
 }
 section.splash {
-  background: url('../img/alejandroescamilla-book.png') no-repeat center center; 
+  background: url("http://nextmlt.com/wp-content/uploads/2014/05/alejandroescamilla-book.jpg") no-repeat center center;
   background-size: cover;
 }
 section.color {
@@ -107,11 +110,11 @@ p {
   text-align:center;
 }
 
-h1.logo {
+.logo {
   display: inline-block;
   margin: 0;
-  line-height:5em;
   padding:0;
+  line-height: $header-height / 2;
   float: left;
   font-family: "Open Sans", sans-serif;
   color: $light-background;
@@ -123,22 +126,10 @@ h1.logo {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-h1#tagline {
+#tagline {
   color:$black;
   font-style:italic;  
-}
-header.smaller {
-  height: 75px;
-  h1#logo {
-    line-height: 75px;
-    font-size: 30px;
-  }
-  nav {
-    a {
-
-    }  
-  }
-}        
+}       
 .col {
   width:31.3333333%;
   display:inline-block;
@@ -304,32 +295,54 @@ footer {
 }
 
 .smaller {
-height: 75px;
+  height: $smaller-header-height;
   nav {
   height: 35px;
     a {
-      line-height: 35px;
+      line-height: $smaller-header-height;
     }
   }
   .logo {
-  height: 40px;
-  line-height: 2em;
-  font-size: 30px;
+    line-height: $smaller-logo-height;
   }
 }
-
+@media all and (max-width: 1260px) {
+  .smaller {
+      .logo {
+        display:none;
+      }
+    }
+  header {
+    .logo {
+      display:block;
+      width:100%;
+      line-height:2em;
+    }
+    nav {
+      display: block; 
+      float: none;
+      ul {
+        list-style:none;
+        li {
+          width:32.33%;
+          text-align:center;
+          a {
+            line-height: $smaller-header-height;
+            margin:0;
+          }
+        }
+      }
+    }
+  }
+  
+}
 @media all and (max-width: 760px) {
   .logo {
-    display: block;
-    float: none;
-    margin: 0 auto;
-    height: 100px;     
-    line-height: 80px;
-    text-align: center;
+    display:none;
   }
   .smaller {
     .logo {
-      width:100%;
+      display:none;
     }
   }
 }
@@ -337,5 +350,8 @@ height: 75px;
 @media all and (max-width: 600px) {
   .container {
     width: 100%;
+  }
+  .logo {
+    display:none;
   }
 }
