@@ -2,14 +2,15 @@
 
 
 $base-font-name: "Open Sans", sans serif;
-$padding-margin-value: 2em;
+$padding-margin-value: 4em;
+$small-padding-margin-value:1.1em;
 $header-height: 10em;
 $smaller-header-height: 5em;
 $smaller-logo-height:2.3em;
 $icon-size:64px;
 $base-font-size: 1.1em;
 $base-font-light:300;
-$line-height: 1.8em;
+$line-height: 1.42857143em;
 $black:#3c3c3c;
 $dark-purple:#6F5499;
 $dark-grey:#565656;
@@ -96,26 +97,31 @@ header {
     }
   }
 }
-section.splash {
+.splash {
   background: url("http://nextmlt.com/wp-content/uploads/2014/05/alejandroescamilla-book.jpg") no-repeat center center;
   background-size: cover;
+  height:30em;
 }
-section.color {
+.color {
   background-color: #f4f4f4;
 }
-section {
-  padding:$padding-margin-value 0;
-  min-height:30em;
-}
+
 p {
   text-align:center;
+  margin:$small-padding-margin-value 0;
 }
-
+.border {
+  padding:$small-padding-margin-value 0;
+  border:1px solid $accent-color;
+  width:32.33%;
+  min-width:6em;
+  margin:0 auto;
+}
 .logo {
   display: inline-block;
   margin: 0;
   padding:0;
-  line-height: $header-height / 2;
+  line-height: $header-height/2;
   float: left;
   font-family: "Open Sans", sans-serif;
   color: $light-background;
@@ -129,17 +135,20 @@ p {
 }
 #tagline {
   color:$black;
-  font-style:italic;  
+  font-style:italic; 
+  font-weight:bold;
+  margin-top:$padding-margin-value;
+  line-height:2em;
+  
 }       
 .col {
-  width:31.3333333%;
+  width:32.33%;
   display:inline-block;
   vertical-align: top;
   text-align:center;
 }
-h1,h3 {
+h1 {
   font-weight:$base-font-light;
-  padding-top:$padding-margin-value;
   display:block;
   color: $accent-color;
   text-align:center;
@@ -153,18 +162,28 @@ h1,h3 {
   }
 
 }
+
+h3 {
+  font-weight:$base-font-light;
+  display:block;
+  color: $accent-color;
+  text-align:center;
+  margin:$small-padding-margin-value 0 0 0 ;
+}
+
 .container {
   width:60%;
-  margin:0 auto;
+  margin: auto;
   padding:0;
+}
+section {
+  padding: $padding-margin-value 0;
 }
 footer {
   background-color: #3c3c3c;
   text-align: center;
-  min-height:17em;
   color: #bababa;
-  padding:$padding-margin-value;
-  font-size:0.8em;
+  padding:$padding-margin-value 0;
   .container {
     position:relative;
   }
@@ -191,9 +210,10 @@ footer {
   height: 32px;
   width: 32px;
   position: relative;
-  margin: 15px;
+  margin: 15px auto;
   overflow: hidden;
   display: inline-block;
+  
 }
 .home {
   height: 0px;
@@ -226,16 +246,15 @@ footer {
     right: -5px;
   }
 }
-#content {
-  margin-top:$header-height;
+#main {
+  margin-top:$header-height; 
 }
 .icon-container {
   border:1px solid $dark-background;
   border-radius:$icon-size;
   width:$icon-size;
   height:$icon-size;
-  margin:auto;
-  margin-top:$padding-margin-value;
+  margin:$small-padding-margin-value auto;
 
 }
 .copy {
@@ -263,6 +282,7 @@ footer {
   color:#77C7AC;
   }
 }
+
 .phone {
   position: absolute;
   width: 20px;
@@ -306,6 +326,9 @@ footer {
   .logo {
     line-height: $smaller-logo-height;
   }
+  .content {
+    margin-top:$smaller-header-height;
+  }
 }
 @media all and (max-width: 1260px) {
   .smaller {
@@ -319,6 +342,7 @@ footer {
       width:100%;
       line-height:2em;
     }
+        
     nav {
       display: block; 
       float: none;
@@ -338,10 +362,11 @@ footer {
   
 }
 
-@media all and (max-width: 1260px) {
+@media all and (max-width: 1000px) {
   .col {
     width:100%;
   }
+  
   footer {
     ul {
       margin:0;
