@@ -6,6 +6,7 @@ $padding-margin-value: 2em;
 $header-height: 10em;
 $smaller-header-height: 5em;
 $smaller-logo-height:2.3em;
+$icon-size:64px;
 $base-font-size: 1.1em;
 $base-font-light:300;
 $line-height: 1.8em;
@@ -197,19 +198,19 @@ footer {
 .home {
   height: 0px;
   width: 0px;
-  border-width: 16px;
+  border-width: $icon-size/4;
   border-style: solid;
   border-color: transparent transparent #394e63 transparent;
   position: absolute;
-  bottom: 16px;
+  bottom: $icon-size/4;
   left: 0;
   &:after {
     content: '';
     width: 22px;
-    height: 16px;
+    height: $icon-size/4;
     background-color: transparent;
     position: absolute;
-    top: 16px;
+    top: $icon-size/4;
     right: -11px;
     border-left: 8px solid $dark-background;
     border-right: 8px solid $dark-background;
@@ -221,7 +222,7 @@ footer {
     height: 6px;
     background-color: $dark-background;
     position: absolute;
-    top: 16px;
+    top: $icon-size/4;
     right: -5px;
   }
 }
@@ -230,9 +231,9 @@ footer {
 }
 .icon-container {
   border:1px solid $dark-background;
-  border-radius:64px;
-  width:64px;
-  height:64px;
+  border-radius:$icon-size;
+  width:$icon-size;
+  height:$icon-size;
   margin:auto;
   margin-top:$padding-margin-value;
 
@@ -251,9 +252,9 @@ footer {
   top: 3px;
 }
 #letter {
-  height:32px;
+  line-height:25px;
   vertical-align:top;
-  font-size:2.5em;
+  font-size:2em;
   color:$dark-background;
 }
 #email {
@@ -265,7 +266,7 @@ footer {
 .phone {
   position: absolute;
   width: 20px;
-  height: 32px;
+  height: $icon-size/2;
   background-color: $dark-background;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -335,6 +336,21 @@ footer {
     }
   }
   
+}
+
+@media all and (max-width: 1260px) {
+  .col {
+    width:100%;
+  }
+  footer {
+    ul {
+      margin:0;
+      padding:0;
+    }
+    .col {
+      width:32.33%;
+    }
+  }
 }
 @media all and (max-width: 760px) {
   .logo {
