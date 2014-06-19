@@ -32,16 +32,16 @@ aws_s3: {
       bucket: '<%= s3settings.bucket %>',
       differential: false ,// Only uploads the files that have changed
       debug: false,
-      params: {
+/**      params: {
         ContentEncoding: 'gzip', // applies to all the files!
         CacheControl: 'max-age=290304000, public',
-      }
+      }**/
     },
     files: [
-      {expand: false, cwd: 'src', src: ['*.html'], dest: '', params: {CacheControl:'No-Cache', ContentEncoding: 'gzip'}},
-      {expand: true, cwd: 'src/assets/css', src: ['**'], dest: 'assets/css',params:{ContentEncoding: 'gzip'}},
+      {expand: false, cwd: 'src', src: ['**'], dest: ''},
+      {expand: true, cwd: 'src/assets/css', src: ['**'], dest: 'assets/css'},
       {expand: true, cwd: 'src/assets/img', src: ['**'], dest: 'assets/img'},
-      {expand: true, cwd: 'src/assets/js', src: ['**'], dest: 'assets/js',params:{ContentEncoding: 'gzip'}}
+      {expand: true, cwd: 'src/assets/js', src: ['**'], dest: 'assets/js'}
     ]
   },
   download: {
@@ -145,6 +145,6 @@ watch: {
 
 grunt.registerTask('deploy', ['aws_s3:live']);
 grunt.registerTask('download', ['aws_s3:download']);
-grunt.registerTask('default', ['concat', 'uglify','copy','cssmin','htmlmin','imagemin']);
+grunt.registerTask('default', ['concat', 'uglify','cssmin','imagemin']);
 
 };

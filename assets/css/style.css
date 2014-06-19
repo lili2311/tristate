@@ -151,7 +151,7 @@ body, html {
   font-family: "Open Sans", sans serif;
   font-weight: 300;
   font-size: 1.1em;
-  line-height: 1.8em; }
+  line-height: 1.42857em; }
 
 div.clearfix:after {
   visibility: hidden;
@@ -182,7 +182,9 @@ header {
     display: inline-block;
     float: right; }
     header nav ul {
-      list-style: none; }
+      list-style: none;
+      margin: 0;
+      padding: 0; }
       header nav ul li {
         display: inline-block; }
         header nav ul li a {
@@ -199,25 +201,30 @@ header {
     header nav a:hover {
       color: #77C7AC; }
 
-section.splash {
-  background: url("../img/alejandroescamilla-book.png") no-repeat center center;
-  background-size: cover; }
+.splash {
+  background: url("http://nextmlt.com/wp-content/uploads/2014/05/alejandroescamilla-book.jpg") no-repeat center center;
+  background-size: cover;
+  height: 30em; }
 
-section.color {
+.color {
   background-color: #f4f4f4; }
 
-section {
-  padding: 2em 0;
-  min-height: 30em; }
-
 p {
-  text-align: center; }
+  text-align: center;
+  margin: 1.1em 0; }
 
-h1.logo {
+.border {
+  padding: 1.1em 0;
+  border: 1px solid #77c7ac;
+  width: 32.33%;
+  min-width: 6em;
+  margin: 0 auto; }
+
+.logo {
   display: inline-block;
   margin: 0;
-  line-height: 5em;
   padding: 0;
+  line-height: 5em;
   float: left;
   font-family: "Open Sans", sans-serif;
   color: #fcfcfc;
@@ -229,47 +236,56 @@ h1.logo {
   -o-transition: all 0.3s;
   transition: all 0.3s; }
 
-h1#tagline {
+#tagline {
   color: #3c3c3c;
-  font-style: italic; }
-
-header.smaller {
-  height: 75px; }
-  header.smaller h1#logo {
-    line-height: 75px;
-    font-size: 30px; }
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 4em;
+  line-height: 2em; }
 
 .col {
-  width: 31.3333333%;
+  width: 32.33%;
   display: inline-block;
   vertical-align: top;
-  text-align: center; }
+  text-align: center;
+  margin: 1.1em 0 0 0; }
 
-h1, h3 {
+h1 {
   font-weight: 300;
-  padding-top: 2em;
   display: block;
   color: #77c7ac;
   text-align: center;
   margin: 0; }
-  h1 a, h3 a {
+  h1 a {
     color: #77c7ac;
     text-decoration: none; }
-    h1 a:hover, h3 a:hover {
+    h1 a:hover {
       color: #394e63; }
+
+h3 {
+  font-weight: 300;
+  display: block;
+  text-align: center;
+  margin: 1.1em 0 0 0; }
+  h3 a {
+    color: #77c7ac;
+    text-decoration: none; }
 
 .container {
   width: 60%;
-  margin: 0 auto;
+  margin: auto;
   padding: 0; }
+
+section {
+  padding: 4em 0; }
 
 footer {
   background-color: #3c3c3c;
   text-align: center;
-  min-height: 17em;
   color: #bababa;
-  padding: 2em;
-  font-size: 0.8em; }
+  padding: 4em 0; }
+  footer .col {
+    margin: 0; }
   footer .container {
     position: relative; }
   footer a {
@@ -277,7 +293,8 @@ footer {
     margin: 0;
     text-decoration: underline; }
   footer ul {
-    list-style: none; }
+    list-style: none;
+    margin: 0 0 4em 0; }
     footer ul li a {
       color: #bababa;
       display: block; }
@@ -288,7 +305,7 @@ footer {
   height: 32px;
   width: 32px;
   position: relative;
-  margin: 15px;
+  margin: 15px auto;
   overflow: hidden;
   display: inline-block; }
 
@@ -320,7 +337,7 @@ footer {
     top: 16px;
     right: -5px; }
 
-#content {
+#main {
   margin-top: 10em; }
 
 .icon-container {
@@ -328,8 +345,7 @@ footer {
   border-radius: 64px;
   width: 64px;
   height: 64px;
-  margin: auto;
-  margin-top: 2em; }
+  margin: 1.1em auto; }
 
 .copy {
   color: #77c7ac; }
@@ -343,9 +359,9 @@ footer {
   top: 3px; }
 
 #letter {
-  height: 32px;
+  line-height: 25px;
   vertical-align: top;
-  font-size: 2.5em;
+  font-size: 2em;
   color: #394e63; }
 
 #email {
@@ -383,27 +399,52 @@ footer {
     left: 8px; }
 
 .smaller {
-  height: 75px; }
+  height: 5em; }
   .smaller nav {
     height: 35px; }
     .smaller nav a {
-      line-height: 35px; }
+      line-height: 5em; }
   .smaller .logo {
-    height: 40px;
-    line-height: 2em;
-    font-size: 30px; }
+    line-height: 2.3em; }
+  .smaller .content {
+    margin-top: 5em; }
 
+@media all and (max-width: 1260px) {
+  .smaller .logo {
+    display: none; }
+
+  header .logo {
+    display: block;
+    width: 100%;
+    line-height: 2em; }
+  header nav {
+    display: block;
+    float: none; }
+    header nav ul {
+      list-style: none; }
+      header nav ul li {
+        width: 32.33%;
+        text-align: center; }
+        header nav ul li a {
+          line-height: 5em;
+          margin: 0; } }
+@media all and (max-width: 1000px) {
+  .col {
+    width: 100%; }
+
+  footer ul {
+    padding: 0; }
+  footer .col {
+    width: 32.33%; } }
 @media all and (max-width: 760px) {
   .logo {
-    display: block;
-    float: none;
-    margin: 0 auto;
-    height: 100px;
-    line-height: 80px;
-    text-align: center; }
+    display: none; }
 
   .smaller .logo {
-    width: 100%; } }
+    display: none; } }
 @media all and (max-width: 600px) {
   .container {
-    width: 100%; } }
+    width: 100%; }
+
+  .logo {
+    display: none; } }
