@@ -201,6 +201,11 @@ header {
     header nav a:hover {
       color: #77C7AC; }
 
+#map-canvas {
+  height: 500px;
+  margin: 0;
+  padding: 0; }
+
 .splash {
   background: url("http://nextmlt.com/wp-content/uploads/2014/05/alejandroescamilla-book.jpg") no-repeat center center;
   background-size: cover;

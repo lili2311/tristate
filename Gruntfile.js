@@ -38,10 +38,7 @@ aws_s3: {
       }**/
     },
     files: [
-      {expand: false, cwd: 'src', src: ['**'], dest: ''},
-      {expand: true, cwd: 'src/assets/css', src: ['**'], dest: 'assets/css'},
-      {expand: true, cwd: 'src/assets/img', src: ['**'], dest: 'assets/img'},
-      {expand: true, cwd: 'src/assets/js', src: ['**'], dest: 'assets/js'}
+      {expand: true, cwd: 'src/', src: ['**'], dest: ''},
     ]
   },
   download: {
