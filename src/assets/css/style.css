@@ -166,7 +166,7 @@ div.clearfix:after {
 
 header {
   width: 100%;
-  height: 10em;
+  height: 8em;
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -188,7 +188,7 @@ header {
       header nav ul li {
         display: inline-block; }
         header nav ul li a {
-          line-height: 10em;
+          line-height: 8em;
           color: #fcfcfc;
           text-decoration: none;
           font-weight: 300;
@@ -207,9 +207,13 @@ header {
   padding: 0; }
 
 .splash {
-  background: url("http://nextmlt.com/wp-content/uploads/2014/05/alejandroescamilla-book.jpg") no-repeat center center;
+  background: url(../img/alejandroescamilla-book.png) no-repeat center center;
   background-size: cover;
   height: 30em; }
+
+img {
+  display: block;
+  margin: 1.1em auto; }
 
 .color {
   background-color: #f4f4f4; }
@@ -229,7 +233,7 @@ p {
   display: inline-block;
   margin: 0;
   padding: 0;
-  line-height: 5em;
+  line-height: 4em;
   float: left;
   font-family: "Open Sans", sans-serif;
   color: #fcfcfc;
@@ -243,12 +247,16 @@ p {
   -o-transition: all 0.3s;
   transition: all 0.3s; }
 
-#tagline {
+.tagline {
   color: #3c3c3c;
   font-style: italic;
   font-weight: bold;
   margin-top: 4em;
-  line-height: 2em; }
+  line-height: 1.3em;
+  font-size: 1.875em; }
+
+p.tagline {
+  margin: 1.1em 0; }
 
 .col {
   width: 32.33%;
@@ -262,7 +270,8 @@ h1 {
   display: block;
   color: #77c7ac;
   text-align: center;
-  margin: 0; }
+  margin: 0;
+  font-size: 1.875em; }
   h1 a {
     color: #77c7ac;
     text-decoration: none; }
@@ -272,6 +281,7 @@ h1 {
 h3 {
   font-weight: 300;
   display: block;
+  font-weight: bold;
   text-align: center;
   color: #77c7ac;
   margin: 1.1em 0 0 0; }
@@ -299,7 +309,7 @@ footer {
   footer a {
     display: inline-block;
     margin: 0;
-    text-decoration: underline; }
+    text-decoration: none; }
   footer ul {
     list-style: none;
     padding: 0;
@@ -347,7 +357,7 @@ footer {
     right: -5px; }
 
 #main {
-  margin-top: 10em; }
+  margin-top: 8em; }
 
 .icon-container {
   border: 1px solid #394e63;
@@ -439,15 +449,15 @@ footer {
     left: 8px; }
 
 .smaller {
-  height: 5em; }
+  height: 4em; }
   .smaller nav {
     height: 35px; }
     .smaller nav a {
-      line-height: 5em; }
+      line-height: 4em; }
   .smaller .logo {
     line-height: 2.3em; }
   .smaller .content {
-    margin-top: 5em; }
+    margin-top: 4em; }
 
 @media all and (max-width: 1260px) {
   .smaller .logo {
@@ -459,15 +469,17 @@ footer {
     line-height: 2em; }
   header nav {
     display: block;
-    float: none; }
+    float: none;
+    font-size: 1em; }
     header nav ul {
       list-style: none; }
       header nav ul li {
-        width: 32.33%;
+        width: 31.33%;
         text-align: center; }
         header nav ul li a {
-          line-height: 5em;
-          margin: 0; } }
+          line-height: 4em;
+          margin: 0;
+          font-size: 1em; } }
 @media all and (max-width: 1000px) {
   .col {
     width: 100%; }

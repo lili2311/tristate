@@ -4,8 +4,8 @@
 $base-font-name: "Open Sans", sans serif;
 $padding-margin-value: 4em;
 $small-padding-margin-value:1.1em;
-$header-height: 10em;
-$smaller-header-height: 5em;
+$header-height: 8em;
+$smaller-header-height: 4em;
 $smaller-logo-height:2.3em;
 $icon-size:64px;
 $base-font-size: 1.1em;
@@ -104,10 +104,16 @@ header {
   padding: 0;
 }
 .splash {
-  background: url("http://nextmlt.com/wp-content/uploads/2014/05/alejandroescamilla-book.jpg") no-repeat center center;
+  background: url(../img/alejandroescamilla-book.png) no-repeat center center;
   background-size: cover;
   height:30em;
 }
+img {
+  display: block;
+  margin: $small-padding-margin-value auto;
+
+}
+
 .color {
   background-color: #f4f4f4;
 }
@@ -141,14 +147,20 @@ p {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-#tagline {
+.tagline {
   color:$black;
   font-style:italic; 
   font-weight:bold;
   margin-top:$padding-margin-value;
-  line-height:2em;
-  
-}       
+  line-height:1.3em;
+  font-size: 1.875em;
+}
+
+p.tagline {
+  margin:$small-padding-margin-value 0;
+
+  }
+       
 .col {
   width: 32.33%;
   display:inline-block;
@@ -158,7 +170,7 @@ p {
 }
 h1 {
   font-weight:$base-font-light;
-  display:block;
+  display: block;
   color: $accent-color;
   text-align:center;
   margin:0;
@@ -169,12 +181,13 @@ h1 {
       color: $dark-background;
     }
   }
-
+  font-size: 1.875em;
 }
 
 h3 {
   font-weight:$base-font-light;
   display:block;
+  font-weight: bold;
   text-align:center;
   color: $accent-color;
   margin:$small-padding-margin-value 0 0 0 ;
@@ -206,7 +219,7 @@ footer {
   a {
     display: inline-block;
     margin: 0;
-    text-decoration:underline;
+    text-decoration:none;
   }
   ul {
     list-style:none;
@@ -400,14 +413,17 @@ footer {
     nav {
       display: block; 
       float: none;
+                  font-size: 1em;
+
       ul {
         list-style:none;
         li {
-          width:32.33%;
+          width:31.33%;
           text-align:center;
           a {
             line-height: $smaller-header-height;
             margin:0;
+            font-size: 1em;
           }
         }
       }
